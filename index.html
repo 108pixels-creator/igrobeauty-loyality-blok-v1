@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Программа лояльности + вход — блок</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lb-page">
+  <div class="lb-stack">
+
+    <div class="lb-top">
+
+      <!-- Loyalty card -->
+      <section class="lb-loyalty">
+        <img class="lb-gift-big" src="assets/present-big.png" alt="Подарок" width="200" height="237">
+
+        <div class="lb-loyalty-head">
+          <h2>Программа лояльности<br>для клиентов</h2>
+          <img class="lb-gift" src="assets/present-gift.png" alt="Подарок" width="132" height="128">
+        </div>
+
+        <div class="lb-list">
+          <div class="lb-list-item">
+            <img src="assets/icon-percent.svg" alt="">
+            <span>До <b>25%</b> скидка на заказы</span>
+          </div>
+          <div class="lb-list-item">
+            <img src="assets/icon-diamond.svg" alt="">
+            <span>Клуб привилегий ИГРО</span>
+          </div>
+          <div class="lb-list-item">
+            <img src="assets/icon-badge.svg" alt="">
+            <span>Сезонные акции и эксклюзивные предложения</span>
+          </div>
+          <div class="lb-list-item">
+            <img src="assets/icon-car.svg" alt="">
+            <span>Бесплатная доставка и скидка на самовывоз по Москве и МО</span>
+          </div>
+        </div>
+
+        <button class="lb-btn lb-loyalty-cta">Больше о Программе лояльности <span class="lb-arrow">→</span></button>
+      </section>
+
+      <!-- Login card -->
+      <section class="lb-login">
+        <div>
+          <h2>Вход для профессионалов индустрии</h2>
+          <p class="lb-login-sub">Доступ к профессиональным ценам и условиям</p>
+        </div>
+
+        <div class="lb-fields">
+          <div>
+            <input class="lb-input" type="email" placeholder="Логин">
+          </div>
+
+          <div>
+            <div class="lb-field-pwd">
+              <input class="lb-input" id="lb-password" type="password" placeholder="Пароль">
+              <button class="lb-eye" type="button" aria-label="Показать пароль">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lb-login-actions">
+          <button class="lb-btn">Войти</button>
+          <a class="lb-link" href="#">Зарегистрироваться</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Feature bar -->
+    <section class="lb-feature-bar">
+      <div class="lb-features">
+
+        <div class="lb-feature">
+          <span class="lb-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#006241" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"></path><path d="M9 7V6a3 3 0 0 1 6 0v1"></path></svg>
+          </span>
+          <div class="lb-feature-body">
+            <div class="lb-feature-title">Более 5000 товаров</div>
+            <div class="lb-feature-desc">Ведущие европейские<br>и российские бренды</div>
+          </div>
+        </div>
+
+        <div class="lb-feature">
+          <span class="lb-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#006241" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          </span>
+          <div class="lb-feature-body">
+            <div class="lb-feature-title">Гарантия качества</div>
+            <div class="lb-feature-desc">Вся продукция<br>сертифицирована</div>
+          </div>
+        </div>
+
+        <div class="lb-feature">
+          <span class="lb-feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#006241" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v4a6 6 0 0 1-12 0z"></path><path d="M6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3"></path><path d="M12 14v4M8 21h8M9 21a3 3 0 0 1 6 0"></path></svg>
+          </span>
+          <div class="lb-feature-body">
+            <div class="lb-feature-title">20+ лет на рынке</div>
+            <div class="lb-feature-desc">Один из ведущих поставщиков профессиональной продукции</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  var eyeBtn = document.querySelector('.lb-eye');
+  var pwdInput = document.getElementById('lb-password');
+  eyeBtn.addEventListener('click', function () {
+    var isPwd = pwdInput.type === 'password';
+    pwdInput.type = isPwd ? 'text' : 'password';
+  });
+</script>
+
+</body>
+</html>
